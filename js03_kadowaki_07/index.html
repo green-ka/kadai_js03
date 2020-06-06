@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>育成ゲーム</title>
+  </head>
+  <body>
+    <div class="back-img">
+      <!-- クラゲエリア -->
+      <div class="kuragearea">
+        <!-- クラゲの画像エリア -->
+        <div id="kurage">
+          <img src="img/kurage.png" alt="クラゲの画像" class="kurage-img" />
+        </div>
+      </div>
+      <!-- 状態エリア -->
+      <div class="state">
+        <!-- 記録エリア -->
+        <div class="record">
+          <!-- 日付 -->
+          <div id="date"></div>
+          <!-- 名前 -->
+          <div id="name"></div>
+          <!-- 満腹度 -->
+          <div id="full"></div>
+        </div>
+        <!-- ボタンエリア -->
+        <div class="buttonStyle">
+          <p class="b">
+            <input
+              type="button"
+              value="エサやり"
+              id="baitButton"
+              class="button"
+            />
+          </p>
+          <p class="b">
+            <input
+              type="button"
+              value="新しく育てる"
+              id="startButton"
+              class="button"
+            />
+          </p>
+          <p class="b">
+            <input
+              type="button"
+              value="名前変更"
+              id="nameButton"
+              class="button"
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JQuery -->
+
+    <!--** 以下Firebase **-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA4M_U1g2Jwe9pqkfZXIVcs6eLiI9oAi-Y",
+        authDomain: "kadai-js03.firebaseapp.com",
+        databaseURL: "https://kadai-js03.firebaseio.com",
+        projectId: "kadai-js03",
+        storageBucket: "kadai-js03.appspot.com",
+        messagingSenderId: "710510606293",
+        appId: "1:710510606293:web:59a08e82eead714da0ef5c",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!--** Firebase **-->
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <!-- JavaScript -->
+  </body>
+</html>
